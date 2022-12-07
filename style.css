@@ -1,0 +1,81 @@
+*{
+    padding:0;
+    margin:0;
+    text-transform: capitalize;
+    box-sizing:border-box;
+}
+body{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family: sans-serif;
+    transition:all 0.5s;
+}
+body.active{
+    color: white;
+    background-color: red;
+    transition: all 0.5s;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+}
+li{
+    padding: 10px 40px;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+}
+.landing{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.toggle{
+    position: relative;
+    transform: translateY(300%);
+    left: 50%;
+    border: 1px solid red;
+    width: fit-content;
+}
+.toggle input{
+    position: relative;
+    width: 88px;
+    height: 40px;
+    appearance: none;
+    background-color: #fff;
+    outline: none;
+    box-shadow: 0 0 10px #ccc;
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+.toggle input:checked{
+    background-color: #252525b0;
+    transition: all 0.5s;
+}
+.toggle input::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 45px;
+    height: 100%;
+    transform: scale(1.1);
+    border-radius: 20px;
+    background-color: #ccc;
+    transition: all 0.5s;
+}
+.toggle input:checked::before{
+    right:50%;
+    transition: all 0.5s;
+    background-color: #252525;
+}
